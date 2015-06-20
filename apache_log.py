@@ -20,7 +20,7 @@ for line in f:
        a=line.split()
        ip1=a[0]
        date1=a[3]+" timezone="+a[4]
-       request=a[5]+a[6]+" "+a[7]     
+       request="RequestType= "+a[5]+"\""+" Url= \" "+a[6]+"\""+" "+"protocol=\""+a[7]+"\""     
        status=a[8]   
        size=a[9]
        browser=a[11]+a[12]
