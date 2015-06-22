@@ -11,4 +11,8 @@ then
    cp webapp.py /ApacheLogAnalyser
    cp -r templates /ApacheLogAnalyser
    cp run.sh shutdown.sh /ApacheLogAnalyser/.
+   chmod  u+x /ApacheLogAnalyser/webappy.sh
+   chmod  u+x /ApacheLogAnalyser/run.sh
+   chmod  u+x /ApacheLogAnalyser/shutdown.sh
+      
 fi    
