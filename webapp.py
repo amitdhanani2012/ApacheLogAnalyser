@@ -60,7 +60,7 @@ class SearchQuery(tornado.web.RequestHandler):
                  if p=="and":
                     t=t+""" and """ 
                  p="and"
-                 t=t+"""url==urlx"""
+                 t=t+"""url.lower() in urlx.lower()"""
               if request!=" " and request!="":
                  if p=="and":
                     t=t+""" and """ 
@@ -88,14 +88,17 @@ class SearchQuery(tornado.web.RequestHandler):
                  browserx=browserx.lstrip('["')
                  browserx=browserx.rstrip('"]')
                  a[11]=browserx  
-                 if a[10]!="'-":
-                    a[12]="location="+a[10].lstrip('"').rstrip('"')
+                 #if a[10]!="'-":
+                 
+                 a[12]="location="+a[10].lstrip('"').rstrip('"')
+                 
                  t=t+""" :"""
                  t=t+"""\n\tb.append(a) """
+                 #print(a)
                  #print sizex
                  #print size
                  exec t   
-             
+                 #print(a[12])             
               #print t
               #print ipx
               #print ip
@@ -106,7 +109,7 @@ class SearchQuery(tornado.web.RequestHandler):
              
               
           if len(b)==0:
-              b.append("no result")                     
+              b.append("")                     
 
           self.render('search.html',fpath1=b)
 
