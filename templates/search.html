@@ -1,0 +1,12 @@
+<html>
+<head>
+<title>Apache Log Analyser</title>
+</head>
+<body>
+<table border=1 align=center><tr><td><b>IP<b></td><td><b>Date Time</b></td><td><b>Request</b></td><td><b>URL</b></td><td><b>Location</b></td><td><b>Status</b></td><td><b>Size</b></td><td><b>Browser Details</b></td></tr>
+   {% for l in fpath1 %}
+<tr><td>{{l[0]}}</td><td>{{l[3]}}</td><td>{{l[5]}}</td><td>{{l[6]}}</td><td>{{l[12]}}</td><td>{{l[8]}}</td><td>{{l[9]}}</td><td>{{l[11]}}</td></tr> 
+   {% end %} 
+</table>
+</body>
+</html>
