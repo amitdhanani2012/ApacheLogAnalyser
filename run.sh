@@ -1,1 +1,1 @@
-webapp.py --port=8000 &
+./webapp.py --port=8000 &
